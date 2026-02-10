@@ -1,73 +1,81 @@
-# React + TypeScript + Vite
+# World Language Map
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interactive world map for exploring official and major languages by country.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Zoom and pan world map with graticule overlay.
+- Hover tooltip with country name, language list, and primary language family.
+- Click country for a detailed side panel.
+- Two visualization modes.
+- `Highlight Languages`: select one or more languages and highlight countries where they are spoken.
+- `Language Families`: color countries by their primary language family.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19 + TypeScript
+- Vite 7
+- D3 (`d3-geo`, `d3-scale`, `d3-scale-chromatic`, `d3-selection`)
+- TopoJSON (`topojson-client`) and `world-atlas`
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Prerequisites:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js 20+
+- npm 10+
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Install and run:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Scripts
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- `npm run dev` - start dev server
+- `npm run build` - type-check and build production bundle
+- `npm run preview` - preview production build locally
+- `npm run lint` - run ESLint
+
+Data generation (one-time or when editing language data source script):
+
+```bash
+npx tsx scripts/prepare-language-data.ts
 ```
+
+This rewrites:
+
+- `src/data/country-code-map.json` (250 entries)
+- `src/data/language-data.json` (200 country entries)
+- `src/data/language-families.json` (102 language entries)
+
+## Data Sources
+
+- Runtime map geometry: `world-atlas/countries-110m.json` (loaded in `src/hooks/useWorldMapData.ts`).
+- Country/language join and language metadata: generated static JSON in `src/data/`.
+- Reference shapefiles in `map_data/` are Natural Earth admin-0 country files included for local reference.
+
+## Project Structure
+
+```text
+src/
+  components/
+    controls/      # mode selector, language selector, country detail panel
+    layout/        # header + main/sidebar layout
+    map/           # map svg, tooltip, legend
+  hooks/           # data loading, map interaction, responsive dimensions
+  data/            # generated JSON datasets
+  utils/           # color scales + data join helpers
+scripts/
+  prepare-language-data.ts
+map_data/          # Natural Earth reference shapefiles
+```
+
+## Notes
+
+- Language data is curated static data and is not exhaustive for every spoken language in each country.
+- Family mode uses each country's `primaryFamily` field.
