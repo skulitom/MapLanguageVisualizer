@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'IBM Plex Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --bg-base: #050a13;
+  --bg-panel: #0d1728;
+  --bg-elevated: #142136;
+  --border-muted: #243852;
+  --text-primary: #e8effa;
+  --text-secondary: #b6c7e3;
+  --text-muted: #7f96b9;
+  --accent: #5ad4ff;
+  --accent-bright: #7ce1ff;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text-primary);
+  background-color: var(--bg-base);
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0d182c, var(--bg-base) 45%);
+  color: var(--text-primary);
+}
+
+#root {
+  height: 100vh;
+}

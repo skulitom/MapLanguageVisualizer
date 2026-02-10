@@ -1,0 +1,1484 @@
+{
+  "AF": {
+    "name": "Afghanistan",
+    "languages": [
+      "ps",
+      "fa"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "AL": {
+    "name": "Albania",
+    "languages": [
+      "sq"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "DZ": {
+    "name": "Algeria",
+    "languages": [
+      "arb",
+      "fr"
+    ],
+    "primaryFamily": "Afro-Asiatic"
+  },
+  "AD": {
+    "name": "Andorra",
+    "languages": [
+      "ca"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "AO": {
+    "name": "Angola",
+    "languages": [
+      "pt"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "AG": {
+    "name": "Antigua and Barbuda",
+    "languages": [
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "AR": {
+    "name": "Argentina",
+    "languages": [
+      "es"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "AM": {
+    "name": "Armenia",
+    "languages": [
+      "hy"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "AU": {
+    "name": "Australia",
+    "languages": [
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "AT": {
+    "name": "Austria",
+    "languages": [
+      "de"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "AZ": {
+    "name": "Azerbaijan",
+    "languages": [
+      "az"
+    ],
+    "primaryFamily": "Turkic"
+  },
+  "BS": {
+    "name": "Bahamas",
+    "languages": [
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "BH": {
+    "name": "Bahrain",
+    "languages": [
+      "arb"
+    ],
+    "primaryFamily": "Afro-Asiatic"
+  },
+  "BD": {
+    "name": "Bangladesh",
+    "languages": [
+      "bn"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "BB": {
+    "name": "Barbados",
+    "languages": [
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "BY": {
+    "name": "Belarus",
+    "languages": [
+      "be",
+      "ru"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "BE": {
+    "name": "Belgium",
+    "languages": [
+      "nl",
+      "fr",
+      "de"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "BZ": {
+    "name": "Belize",
+    "languages": [
+      "en",
+      "es"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "BJ": {
+    "name": "Benin",
+    "languages": [
+      "fr"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "BT": {
+    "name": "Bhutan",
+    "languages": [
+      "dz"
+    ],
+    "primaryFamily": "Sino-Tibetan"
+  },
+  "BO": {
+    "name": "Bolivia",
+    "languages": [
+      "es",
+      "qu",
+      "ay"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "BA": {
+    "name": "Bosnia and Herzegovina",
+    "languages": [
+      "bs",
+      "hr",
+      "sr"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "BW": {
+    "name": "Botswana",
+    "languages": [
+      "en",
+      "tn"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "BR": {
+    "name": "Brazil",
+    "languages": [
+      "pt"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "BN": {
+    "name": "Brunei",
+    "languages": [
+      "ms"
+    ],
+    "primaryFamily": "Austronesian"
+  },
+  "BG": {
+    "name": "Bulgaria",
+    "languages": [
+      "bg"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "BF": {
+    "name": "Burkina Faso",
+    "languages": [
+      "fr"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "BI": {
+    "name": "Burundi",
+    "languages": [
+      "rn",
+      "fr"
+    ],
+    "primaryFamily": "Niger-Congo"
+  },
+  "KH": {
+    "name": "Cambodia",
+    "languages": [
+      "km"
+    ],
+    "primaryFamily": "Austroasiatic"
+  },
+  "CM": {
+    "name": "Cameroon",
+    "languages": [
+      "fr",
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "CA": {
+    "name": "Canada",
+    "languages": [
+      "en",
+      "fr"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "CV": {
+    "name": "Cape Verde",
+    "languages": [
+      "pt"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "CF": {
+    "name": "Central African Republic",
+    "languages": [
+      "fr",
+      "sg"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "TD": {
+    "name": "Chad",
+    "languages": [
+      "fr",
+      "arb"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "CL": {
+    "name": "Chile",
+    "languages": [
+      "es"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "CN": {
+    "name": "China",
+    "languages": [
+      "cmn"
+    ],
+    "primaryFamily": "Sino-Tibetan"
+  },
+  "CO": {
+    "name": "Colombia",
+    "languages": [
+      "es"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "KM": {
+    "name": "Comoros",
+    "languages": [
+      "arb",
+      "fr"
+    ],
+    "primaryFamily": "Afro-Asiatic"
+  },
+  "CG": {
+    "name": "Republic of the Congo",
+    "languages": [
+      "fr"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "CD": {
+    "name": "Democratic Republic of the Congo",
+    "languages": [
+      "fr"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "CR": {
+    "name": "Costa Rica",
+    "languages": [
+      "es"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "CI": {
+    "name": "Côte d'Ivoire",
+    "languages": [
+      "fr"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "HR": {
+    "name": "Croatia",
+    "languages": [
+      "hr"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "CU": {
+    "name": "Cuba",
+    "languages": [
+      "es"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "CY": {
+    "name": "Cyprus",
+    "languages": [
+      "el",
+      "tr"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "CZ": {
+    "name": "Czechia",
+    "languages": [
+      "cs"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "DK": {
+    "name": "Denmark",
+    "languages": [
+      "da"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "DJ": {
+    "name": "Djibouti",
+    "languages": [
+      "fr",
+      "arb"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "DM": {
+    "name": "Dominica",
+    "languages": [
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "DO": {
+    "name": "Dominican Republic",
+    "languages": [
+      "es"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "EC": {
+    "name": "Ecuador",
+    "languages": [
+      "es"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "EG": {
+    "name": "Egypt",
+    "languages": [
+      "arb"
+    ],
+    "primaryFamily": "Afro-Asiatic"
+  },
+  "SV": {
+    "name": "El Salvador",
+    "languages": [
+      "es"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "GQ": {
+    "name": "Equatorial Guinea",
+    "languages": [
+      "es",
+      "fr",
+      "pt"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "ER": {
+    "name": "Eritrea",
+    "languages": [
+      "ti",
+      "arb",
+      "en"
+    ],
+    "primaryFamily": "Afro-Asiatic"
+  },
+  "EE": {
+    "name": "Estonia",
+    "languages": [
+      "et"
+    ],
+    "primaryFamily": "Uralic"
+  },
+  "SZ": {
+    "name": "Eswatini",
+    "languages": [
+      "en",
+      "ss"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "ET": {
+    "name": "Ethiopia",
+    "languages": [
+      "am"
+    ],
+    "primaryFamily": "Afro-Asiatic"
+  },
+  "FJ": {
+    "name": "Fiji",
+    "languages": [
+      "en",
+      "fj",
+      "hi"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "FI": {
+    "name": "Finland",
+    "languages": [
+      "fi",
+      "sv"
+    ],
+    "primaryFamily": "Uralic"
+  },
+  "FR": {
+    "name": "France",
+    "languages": [
+      "fr"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "GA": {
+    "name": "Gabon",
+    "languages": [
+      "fr"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "GM": {
+    "name": "Gambia",
+    "languages": [
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "GE": {
+    "name": "Georgia",
+    "languages": [
+      "ka"
+    ],
+    "primaryFamily": "Kartvelian"
+  },
+  "DE": {
+    "name": "Germany",
+    "languages": [
+      "de"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "GH": {
+    "name": "Ghana",
+    "languages": [
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "GR": {
+    "name": "Greece",
+    "languages": [
+      "el"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "GD": {
+    "name": "Grenada",
+    "languages": [
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "GT": {
+    "name": "Guatemala",
+    "languages": [
+      "es"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "GN": {
+    "name": "Guinea",
+    "languages": [
+      "fr"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "GW": {
+    "name": "Guinea-Bissau",
+    "languages": [
+      "pt"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "GY": {
+    "name": "Guyana",
+    "languages": [
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "HT": {
+    "name": "Haiti",
+    "languages": [
+      "fr",
+      "ht"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "HN": {
+    "name": "Honduras",
+    "languages": [
+      "es"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "HU": {
+    "name": "Hungary",
+    "languages": [
+      "hu"
+    ],
+    "primaryFamily": "Uralic"
+  },
+  "IS": {
+    "name": "Iceland",
+    "languages": [
+      "is"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "IN": {
+    "name": "India",
+    "languages": [
+      "hi",
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "ID": {
+    "name": "Indonesia",
+    "languages": [
+      "id"
+    ],
+    "primaryFamily": "Austronesian"
+  },
+  "IR": {
+    "name": "Iran",
+    "languages": [
+      "fa"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "IQ": {
+    "name": "Iraq",
+    "languages": [
+      "arb",
+      "ku"
+    ],
+    "primaryFamily": "Afro-Asiatic"
+  },
+  "IE": {
+    "name": "Ireland",
+    "languages": [
+      "en",
+      "ga"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "IL": {
+    "name": "Israel",
+    "languages": [
+      "he",
+      "arb"
+    ],
+    "primaryFamily": "Afro-Asiatic"
+  },
+  "IT": {
+    "name": "Italy",
+    "languages": [
+      "it"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "JM": {
+    "name": "Jamaica",
+    "languages": [
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "JP": {
+    "name": "Japan",
+    "languages": [
+      "ja"
+    ],
+    "primaryFamily": "Japonic"
+  },
+  "JO": {
+    "name": "Jordan",
+    "languages": [
+      "arb"
+    ],
+    "primaryFamily": "Afro-Asiatic"
+  },
+  "KZ": {
+    "name": "Kazakhstan",
+    "languages": [
+      "kk",
+      "ru"
+    ],
+    "primaryFamily": "Turkic"
+  },
+  "KE": {
+    "name": "Kenya",
+    "languages": [
+      "en",
+      "sw"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "KI": {
+    "name": "Kiribati",
+    "languages": [
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "KP": {
+    "name": "North Korea",
+    "languages": [
+      "ko"
+    ],
+    "primaryFamily": "Koreanic"
+  },
+  "KR": {
+    "name": "South Korea",
+    "languages": [
+      "ko"
+    ],
+    "primaryFamily": "Koreanic"
+  },
+  "KW": {
+    "name": "Kuwait",
+    "languages": [
+      "arb"
+    ],
+    "primaryFamily": "Afro-Asiatic"
+  },
+  "KG": {
+    "name": "Kyrgyzstan",
+    "languages": [
+      "ky",
+      "ru"
+    ],
+    "primaryFamily": "Turkic"
+  },
+  "LA": {
+    "name": "Laos",
+    "languages": [
+      "lo"
+    ],
+    "primaryFamily": "Kra-Dai"
+  },
+  "LV": {
+    "name": "Latvia",
+    "languages": [
+      "lv"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "LB": {
+    "name": "Lebanon",
+    "languages": [
+      "arb",
+      "fr"
+    ],
+    "primaryFamily": "Afro-Asiatic"
+  },
+  "LS": {
+    "name": "Lesotho",
+    "languages": [
+      "en",
+      "st"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "LR": {
+    "name": "Liberia",
+    "languages": [
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "LY": {
+    "name": "Libya",
+    "languages": [
+      "arb"
+    ],
+    "primaryFamily": "Afro-Asiatic"
+  },
+  "LI": {
+    "name": "Liechtenstein",
+    "languages": [
+      "de"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "LT": {
+    "name": "Lithuania",
+    "languages": [
+      "lt"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "LU": {
+    "name": "Luxembourg",
+    "languages": [
+      "lb",
+      "fr",
+      "de"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "MG": {
+    "name": "Madagascar",
+    "languages": [
+      "mg",
+      "fr"
+    ],
+    "primaryFamily": "Austronesian"
+  },
+  "MW": {
+    "name": "Malawi",
+    "languages": [
+      "en",
+      "ny"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "MY": {
+    "name": "Malaysia",
+    "languages": [
+      "ms"
+    ],
+    "primaryFamily": "Austronesian"
+  },
+  "MV": {
+    "name": "Maldives",
+    "languages": [
+      "dv"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "ML": {
+    "name": "Mali",
+    "languages": [
+      "fr"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "MT": {
+    "name": "Malta",
+    "languages": [
+      "mt",
+      "en"
+    ],
+    "primaryFamily": "Afro-Asiatic"
+  },
+  "MR": {
+    "name": "Mauritania",
+    "languages": [
+      "arb"
+    ],
+    "primaryFamily": "Afro-Asiatic"
+  },
+  "MU": {
+    "name": "Mauritius",
+    "languages": [
+      "en",
+      "fr"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "MX": {
+    "name": "Mexico",
+    "languages": [
+      "es"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "MD": {
+    "name": "Moldova",
+    "languages": [
+      "ro"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "MC": {
+    "name": "Monaco",
+    "languages": [
+      "fr"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "MN": {
+    "name": "Mongolia",
+    "languages": [
+      "mn"
+    ],
+    "primaryFamily": "Mongolic"
+  },
+  "ME": {
+    "name": "Montenegro",
+    "languages": [
+      "sr"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "MA": {
+    "name": "Morocco",
+    "languages": [
+      "arb",
+      "fr"
+    ],
+    "primaryFamily": "Afro-Asiatic"
+  },
+  "MZ": {
+    "name": "Mozambique",
+    "languages": [
+      "pt"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "MM": {
+    "name": "Myanmar",
+    "languages": [
+      "my"
+    ],
+    "primaryFamily": "Sino-Tibetan"
+  },
+  "NA": {
+    "name": "Namibia",
+    "languages": [
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "NR": {
+    "name": "Nauru",
+    "languages": [
+      "na",
+      "en"
+    ],
+    "primaryFamily": "Austronesian"
+  },
+  "NP": {
+    "name": "Nepal",
+    "languages": [
+      "ne"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "NL": {
+    "name": "Netherlands",
+    "languages": [
+      "nl"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "NZ": {
+    "name": "New Zealand",
+    "languages": [
+      "en",
+      "mi"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "NI": {
+    "name": "Nicaragua",
+    "languages": [
+      "es"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "NE": {
+    "name": "Niger",
+    "languages": [
+      "fr"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "NG": {
+    "name": "Nigeria",
+    "languages": [
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "MK": {
+    "name": "North Macedonia",
+    "languages": [
+      "mk"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "NO": {
+    "name": "Norway",
+    "languages": [
+      "no",
+      "nb",
+      "nn"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "OM": {
+    "name": "Oman",
+    "languages": [
+      "arb"
+    ],
+    "primaryFamily": "Afro-Asiatic"
+  },
+  "PK": {
+    "name": "Pakistan",
+    "languages": [
+      "ur",
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "PW": {
+    "name": "Palau",
+    "languages": [
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "PS": {
+    "name": "Palestine",
+    "languages": [
+      "arb"
+    ],
+    "primaryFamily": "Afro-Asiatic"
+  },
+  "PA": {
+    "name": "Panama",
+    "languages": [
+      "es"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "PG": {
+    "name": "Papua New Guinea",
+    "languages": [
+      "en",
+      "tpi"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "PY": {
+    "name": "Paraguay",
+    "languages": [
+      "es",
+      "gn"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "PE": {
+    "name": "Peru",
+    "languages": [
+      "es",
+      "qu"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "PH": {
+    "name": "Philippines",
+    "languages": [
+      "tl",
+      "en"
+    ],
+    "primaryFamily": "Austronesian"
+  },
+  "PL": {
+    "name": "Poland",
+    "languages": [
+      "pl"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "PT": {
+    "name": "Portugal",
+    "languages": [
+      "pt"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "QA": {
+    "name": "Qatar",
+    "languages": [
+      "arb"
+    ],
+    "primaryFamily": "Afro-Asiatic"
+  },
+  "RO": {
+    "name": "Romania",
+    "languages": [
+      "ro"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "RU": {
+    "name": "Russia",
+    "languages": [
+      "ru"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "RW": {
+    "name": "Rwanda",
+    "languages": [
+      "rw",
+      "fr",
+      "en"
+    ],
+    "primaryFamily": "Niger-Congo"
+  },
+  "KN": {
+    "name": "Saint Kitts and Nevis",
+    "languages": [
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "LC": {
+    "name": "Saint Lucia",
+    "languages": [
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "VC": {
+    "name": "Saint Vincent and the Grenadines",
+    "languages": [
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "WS": {
+    "name": "Samoa",
+    "languages": [
+      "sm",
+      "en"
+    ],
+    "primaryFamily": "Austronesian"
+  },
+  "SM": {
+    "name": "San Marino",
+    "languages": [
+      "it"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "ST": {
+    "name": "São Tomé and Príncipe",
+    "languages": [
+      "pt"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "SA": {
+    "name": "Saudi Arabia",
+    "languages": [
+      "arb"
+    ],
+    "primaryFamily": "Afro-Asiatic"
+  },
+  "SN": {
+    "name": "Senegal",
+    "languages": [
+      "fr"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "RS": {
+    "name": "Serbia",
+    "languages": [
+      "sr"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "SC": {
+    "name": "Seychelles",
+    "languages": [
+      "fr",
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "SL": {
+    "name": "Sierra Leone",
+    "languages": [
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "SG": {
+    "name": "Singapore",
+    "languages": [
+      "en",
+      "ms",
+      "cmn",
+      "ta"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "SK": {
+    "name": "Slovakia",
+    "languages": [
+      "sk"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "SI": {
+    "name": "Slovenia",
+    "languages": [
+      "sl"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "SB": {
+    "name": "Solomon Islands",
+    "languages": [
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "SO": {
+    "name": "Somalia",
+    "languages": [
+      "so",
+      "arb"
+    ],
+    "primaryFamily": "Afro-Asiatic"
+  },
+  "ZA": {
+    "name": "South Africa",
+    "languages": [
+      "af",
+      "en",
+      "zu",
+      "xh"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "SS": {
+    "name": "South Sudan",
+    "languages": [
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "ES": {
+    "name": "Spain",
+    "languages": [
+      "es"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "LK": {
+    "name": "Sri Lanka",
+    "languages": [
+      "si",
+      "ta"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "SD": {
+    "name": "Sudan",
+    "languages": [
+      "arb",
+      "en"
+    ],
+    "primaryFamily": "Afro-Asiatic"
+  },
+  "SR": {
+    "name": "Suriname",
+    "languages": [
+      "nl"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "SE": {
+    "name": "Sweden",
+    "languages": [
+      "sv"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "CH": {
+    "name": "Switzerland",
+    "languages": [
+      "de",
+      "fr",
+      "it",
+      "rm"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "SY": {
+    "name": "Syria",
+    "languages": [
+      "arb"
+    ],
+    "primaryFamily": "Afro-Asiatic"
+  },
+  "TW": {
+    "name": "Taiwan",
+    "languages": [
+      "cmn"
+    ],
+    "primaryFamily": "Sino-Tibetan"
+  },
+  "TJ": {
+    "name": "Tajikistan",
+    "languages": [
+      "tg"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "TZ": {
+    "name": "Tanzania",
+    "languages": [
+      "sw",
+      "en"
+    ],
+    "primaryFamily": "Niger-Congo"
+  },
+  "TH": {
+    "name": "Thailand",
+    "languages": [
+      "th"
+    ],
+    "primaryFamily": "Kra-Dai"
+  },
+  "TL": {
+    "name": "Timor-Leste",
+    "languages": [
+      "pt",
+      "tet"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "TG": {
+    "name": "Togo",
+    "languages": [
+      "fr"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "TO": {
+    "name": "Tonga",
+    "languages": [
+      "to",
+      "en"
+    ],
+    "primaryFamily": "Austronesian"
+  },
+  "TT": {
+    "name": "Trinidad and Tobago",
+    "languages": [
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "TN": {
+    "name": "Tunisia",
+    "languages": [
+      "arb",
+      "fr"
+    ],
+    "primaryFamily": "Afro-Asiatic"
+  },
+  "TR": {
+    "name": "Turkey",
+    "languages": [
+      "tr"
+    ],
+    "primaryFamily": "Turkic"
+  },
+  "TM": {
+    "name": "Turkmenistan",
+    "languages": [
+      "tk"
+    ],
+    "primaryFamily": "Turkic"
+  },
+  "TV": {
+    "name": "Tuvalu",
+    "languages": [
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "UG": {
+    "name": "Uganda",
+    "languages": [
+      "en",
+      "sw"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "UA": {
+    "name": "Ukraine",
+    "languages": [
+      "uk"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "AE": {
+    "name": "United Arab Emirates",
+    "languages": [
+      "arb"
+    ],
+    "primaryFamily": "Afro-Asiatic"
+  },
+  "GB": {
+    "name": "United Kingdom",
+    "languages": [
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "US": {
+    "name": "United States",
+    "languages": [
+      "en",
+      "es"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "UY": {
+    "name": "Uruguay",
+    "languages": [
+      "es"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "UZ": {
+    "name": "Uzbekistan",
+    "languages": [
+      "uz"
+    ],
+    "primaryFamily": "Turkic"
+  },
+  "VU": {
+    "name": "Vanuatu",
+    "languages": [
+      "en",
+      "fr",
+      "bi"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "VE": {
+    "name": "Venezuela",
+    "languages": [
+      "es"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "VN": {
+    "name": "Vietnam",
+    "languages": [
+      "vi"
+    ],
+    "primaryFamily": "Austroasiatic"
+  },
+  "YE": {
+    "name": "Yemen",
+    "languages": [
+      "arb"
+    ],
+    "primaryFamily": "Afro-Asiatic"
+  },
+  "ZM": {
+    "name": "Zambia",
+    "languages": [
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "ZW": {
+    "name": "Zimbabwe",
+    "languages": [
+      "en",
+      "sn",
+      "nd"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "XK": {
+    "name": "Kosovo",
+    "languages": [
+      "sq",
+      "sr"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "NC": {
+    "name": "New Caledonia",
+    "languages": [
+      "fr"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "EH": {
+    "name": "Western Sahara",
+    "languages": [
+      "arb"
+    ],
+    "primaryFamily": "Afro-Asiatic"
+  },
+  "FK": {
+    "name": "Falkland Islands",
+    "languages": [
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "GL": {
+    "name": "Greenland",
+    "languages": [
+      "kl",
+      "da"
+    ],
+    "primaryFamily": "Eskimo-Aleut"
+  },
+  "GF": {
+    "name": "French Guiana",
+    "languages": [
+      "fr"
+    ],
+    "primaryFamily": "Indo-European"
+  },
+  "PR": {
+    "name": "Puerto Rico",
+    "languages": [
+      "es",
+      "en"
+    ],
+    "primaryFamily": "Indo-European"
+  }
+}
