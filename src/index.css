@@ -5,16 +5,34 @@
 }
 
 :root {
-  font-family: 'IBM Plex Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --bg-base: #050a13;
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  --bg-base: #070d18;
   --bg-panel: #0d1728;
   --bg-elevated: #142136;
-  --border-muted: #243852;
+  --bg-hover: #1b2b45;
+  --bg-input: #0a1322;
+  --border-muted: #22354f;
+  --border-strong: #34507a;
   --text-primary: #e8effa;
   --text-secondary: #b6c7e3;
-  --text-muted: #7f96b9;
+  --text-muted: #8196b8;
   --accent: #5ad4ff;
-  --accent-bright: #7ce1ff;
+  --accent-bright: #8be3ff;
+  --accent-ink: #06121f;
+
+  /* Map */
+  --ocean: #0c1829;
+  --graticule: #152438;
+  --sphere-edge: #28405f;
+  --map-gap: #0a1322;
+
+  --header-height: 56px;
+  /* Collapsed bottom sheet on phones; SHEET_PEEK in App.tsx must match. */
+  --sheet-peek: 120px;
+  --shadow-lg: 0 18px 40px rgba(0, 0, 0, 0.45);
+
+  font-family: var(--font-sans);
   line-height: 1.5;
   font-weight: 400;
   color: var(--text-primary);
@@ -24,16 +42,38 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
   margin: 0;
   min-width: 320px;
-  min-height: 100vh;
-  background: radial-gradient(circle at top, #0d182c, var(--bg-base) 45%);
-  color: var(--text-primary);
+  overflow: hidden;
+  overscroll-behavior: none;
+  background: var(--bg-base);
 }
 
-#root {
-  height: 100vh;
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
