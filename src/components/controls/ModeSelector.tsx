@@ -5,24 +5,25 @@ interface ModeSelectorProps {
   onChange: (mode: VisualizationMode) => void;
 }
 
+const MODES: { value: VisualizationMode; label: string }[] = [
+  { value: 'highlight', label: 'Languages' },
+  { value: 'families', label: 'Families' },
+];
+
 export default function ModeSelector({ mode, onChange }: ModeSelectorProps) {
   return (
-    <div className="control-group">
-      <label className="control-label">Visualization Mode</label>
-      <div className="mode-buttons">
+    <div className="segmented" role="group" aria-label="Colour countries by">
+      {MODES.map(({ value, label }) => (
         <button
-          className={`mode-btn ${mode === 'highlight' ? 'active' : ''}`}
-          onClick={() => onChange('highlight')}
+          key={value}
+          type="button"
+          className="segmented-option"
+          aria-pressed={mode === value}
+          onClick={() => onChange(value)}
         >
-          Highlight Languages
+          {label}
         </button>
-        <button
-          className={`mode-btn ${mode === 'families' ? 'active' : ''}`}
-          onClick={() => onChange('families')}
-        >
-          Language Families
-        </button>
-      </div>
+      ))}
     </div>
   );
 }

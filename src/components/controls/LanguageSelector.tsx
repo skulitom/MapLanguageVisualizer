@@ -1,84 +1,83 @@
-import { useMemo } from 'react';
-import type { LanguageData, LanguageFamilies } from '../../types';
-import { getAllLanguages } from '../../utils/dataJoinUtils';
+import { useId, useMemo, useState } from 'react';
+import { LANGUAGES } from '../../data/dataset';
+import { MAX_SELECTED_LANGUAGES } from '../../utils/colorScales';
+import { normalizeText } from '../../utils/search';
 
 interface LanguageSelectorProps {
-  langData: LanguageData;
-  langFamilies: LanguageFamilies;
   selectedLanguages: string[];
-  selectedLanguageColors: Record<string, string>;
-  onChange: (codes: string[]) => void;
-  disabled?: boolean;
+  languageColors: Record<string, string>;
+  onToggle: (code: string) => void;
 }
 
-export default function LanguageSelector({
-  langData,
-  langFamilies,
-  selectedLanguages,
-  selectedLanguageColors,
-  onChange,
-  disabled,
-}: LanguageSelectorProps) {
-  const languages = useMemo(() => getAllLanguages(langData, langFamilies), [langData, langFamilies]);
-  const selectedLanguageSet = useMemo(() => new Set(selectedLanguages), [selectedLanguages]);
+function countriesLabel(count: number): string {
+  return count === 1 ? '1 country' : `${count} countries`;
+}
 
-  const toggleLanguage = (code: string) => {
-    if (selectedLanguageSet.has(code)) {
-      onChange(selectedLanguages.filter((selectedCode) => selectedCode !== code));
-      return;
-    }
+export default function LanguageSelector({ selectedLanguages, languageColors, onToggle }: LanguageSelectorProps) {
+  const titleId = useId();
+  const [filter, setFilter] = useState('');
+  const selected = useMemo(() => new Set(selectedLanguages), [selectedLanguages]);
+  const atLimit = selectedLanguages.length >= MAX_SELECTED_LANGUAGES;
 
-    onChange([...selectedLanguages, code]);
-  };
+  const visible = useMemo(() => {
+    const query = normalizeText(filter);
+    if (!query) return LANGUAGES;
+    return LANGUAGES.filter(
+      (language) =>
+        normalizeText(language.name).includes(query) ||
+        normalizeText(language.nativeName).includes(query) ||
+        language.code === query
+    );
+  }, [filter]);
 
   return (
-    <div className="control-group">
-      <div className="control-label-row">
-        <span className="control-label">Select Languages</span>
-        {selectedLanguages.length > 0 && (
-          <button
-            type="button"
-            className="text-btn"
-            onClick={() => onChange([])}
-            disabled={disabled}
-          >
-            Clear
-          </button>
-        )}
+    <section className="panel-section" aria-labelledby={titleId}>
+      <div className="section-head">
+        <h2 id={titleId} className="section-title">
+          Add languages
+        </h2>
+        <span className="section-meta">
+          {selectedLanguages.length} of {MAX_SELECTED_LANGUAGES}
+        </span>
       </div>
-      <div className="language-selection-summary">
-        {selectedLanguages.length === 0
-          ? 'No languages selected'
-          : `${selectedLanguages.length} language${selectedLanguages.length === 1 ? '' : 's'} selected`}
+      <input
+        type="search"
+        className="filter-input"
+        placeholder={`Filter ${LANGUAGES.length} languages`}
+        aria-label="Filter languages"
+        value={filter}
+        onChange={(event) => setFilter(event.target.value)}
+      />
+      {atLimit && (
+        <p className="hint">That’s as many as the map can colour at once. Remove one to add another.</p>
+      )}
+      <div className="chip-grid" role="group" aria-labelledby={titleId}>
+        {visible.map((language) => {
+          const isSelected = selected.has(language.code);
+          return (
+            <button
+              key={language.code}
+              type="button"
+              className="chip"
+              aria-pressed={isSelected}
+              aria-label={`${language.name}, official in ${countriesLabel(language.countries.length)}`}
+              disabled={!isSelected && atLimit}
+              onClick={() => onToggle(language.code)}
+            >
+              <span
+                className="chip-swatch"
+                style={isSelected ? { background: languageColors[language.code] } : undefined}
+                aria-hidden="true"
+              />
+              <span>{language.name}</span>
+              <span className="chip-count" aria-hidden="true">
+                {language.countries.length}
+              </span>
+            </button>
+          );
+        })}
+        {visible.length === 0 && <p className="hint">No language matches “{filter.trim()}”.</p>}
       </div>
-      <div
-        className="language-chip-grid"
-        role="listbox"
-        aria-label="Language selection"
-        aria-multiselectable="true"
-      >
-        {languages.map((lang) => (
-          <button
-            key={lang.code}
-            type="button"
-            className={`language-chip ${selectedLanguageSet.has(lang.code) ? 'selected' : ''}`}
-            onClick={() => toggleLanguage(lang.code)}
-            aria-pressed={selectedLanguageSet.has(lang.code)}
-            disabled={disabled}
-          >
-            <span
-              className="language-chip-swatch"
-              style={{
-                background:
-                  selectedLanguageSet.has(lang.code)
-                    ? selectedLanguageColors[lang.code]
-                    : 'transparent',
-              }}
-            />
-            <span>{lang.name}</span>
-          </button>
-        ))}
-      </div>
-    </div>
+    </section>
   );
 }

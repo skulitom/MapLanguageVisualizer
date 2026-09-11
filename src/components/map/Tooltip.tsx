@@ -1,37 +1,23 @@
-import type { HoveredCountry, LanguageFamilies } from '../../types';
-import { getLanguageName } from '../../utils/dataJoinUtils';
+import type { ReactNode } from 'react';
 
 interface TooltipProps {
-  hovered: HoveredCountry | null;
-  langFamilies: LanguageFamilies;
+  /** Pointer position in viewport coordinates. */
+  x: number;
+  y: number;
+  /** Place the tooltip left of / above the pointer, near the right or bottom edge. */
+  flipX: boolean;
+  flipY: boolean;
+  children: ReactNode;
 }
 
-export default function Tooltip({ hovered, langFamilies }: TooltipProps) {
-  if (!hovered) return null;
+const OFFSET = 14;
 
+export default function Tooltip({ x, y, flipX, flipY, children }: TooltipProps) {
+  const dx = flipX ? `calc(-100% - ${OFFSET}px)` : `${OFFSET}px`;
+  const dy = flipY ? `calc(-100% - ${OFFSET}px)` : `${OFFSET}px`;
   return (
-    <div
-      className="tooltip"
-      style={{
-        left: hovered.x + 12,
-        top: hovered.y - 10,
-      }}
-    >
-      <strong>{hovered.name || 'Unknown'}</strong>
-      {hovered.languages.length > 0 && (
-        <>
-          <div className="tooltip-row">
-            <span className="tooltip-label">Languages:</span>{' '}
-            {hovered.languages.map((c) => getLanguageName(c, langFamilies)).join(', ')}
-          </div>
-          <div className="tooltip-row">
-            <span className="tooltip-label">Family:</span> {hovered.primaryFamily}
-          </div>
-        </>
-      )}
-      {hovered.languages.length === 0 && (
-        <div className="tooltip-row" style={{ color: '#9ca3af' }}>No language data</div>
-      )}
+    <div className="map-tooltip" role="tooltip" style={{ left: x, top: y, transform: `translate(${dx}, ${dy})` }}>
+      {children}
     </div>
   );
 }
