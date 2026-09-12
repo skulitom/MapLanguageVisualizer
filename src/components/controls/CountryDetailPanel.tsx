@@ -45,7 +45,6 @@ interface CountryLanguagesProps {
   country: MapCountry;
   selectedLanguages: string[];
   languageColors: Record<string, string>;
-  canAddLanguage: boolean;
   onToggleLanguage: (code: string) => void;
 }
 
@@ -53,7 +52,6 @@ export function CountryLanguages({
   country,
   selectedLanguages,
   languageColors,
-  canAddLanguage,
   onToggleLanguage,
 }: CountryLanguagesProps) {
   if (!country.data) {
@@ -91,7 +89,6 @@ export function CountryLanguages({
                 className="toggle-button"
                 aria-pressed={isSelected}
                 aria-label={isSelected ? `Stop highlighting ${name}` : `Highlight ${name} on the map`}
-                disabled={!isSelected && !canAddLanguage}
                 onClick={() => onToggleLanguage(code)}
               >
                 {isSelected ? (

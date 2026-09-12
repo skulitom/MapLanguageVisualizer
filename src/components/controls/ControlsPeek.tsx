@@ -1,6 +1,6 @@
 import type { VisualizationMode } from '../../types';
 import { languageName } from '../../data/dataset';
-import { FAMILY_LEGEND, MAX_SELECTED_LANGUAGES } from '../../utils/colorScales';
+import { FAMILY_LEGEND } from '../../utils/colorScales';
 import { CloseIcon } from '../icons';
 import ModeSelector from './ModeSelector';
 
@@ -46,11 +46,9 @@ export default function ControlsPeek({
                 </button>
               </span>
             ))}
-            {selectedLanguages.length < MAX_SELECTED_LANGUAGES && (
-              <button type="button" className="pill pill-action" onClick={onExpand}>
-                {selectedLanguages.length === 0 ? '+ Choose languages' : '+ Add'}
-              </button>
-            )}
+            <button type="button" className="pill pill-action" onClick={onExpand}>
+              {selectedLanguages.length === 0 ? '+ Choose languages' : '+ Add'}
+            </button>
           </>
         ) : (
           FAMILY_LEGEND.map((entry) => (

@@ -1,6 +1,5 @@
 import { useId, useMemo, useState } from 'react';
 import { LANGUAGES } from '../../data/dataset';
-import { MAX_SELECTED_LANGUAGES } from '../../utils/colorScales';
 import { normalizeText } from '../../utils/search';
 
 interface LanguageSelectorProps {
@@ -17,7 +16,6 @@ export default function LanguageSelector({ selectedLanguages, languageColors, on
   const titleId = useId();
   const [filter, setFilter] = useState('');
   const selected = useMemo(() => new Set(selectedLanguages), [selectedLanguages]);
-  const atLimit = selectedLanguages.length >= MAX_SELECTED_LANGUAGES;
 
   const visible = useMemo(() => {
     const query = normalizeText(filter);
@@ -36,9 +34,9 @@ export default function LanguageSelector({ selectedLanguages, languageColors, on
         <h2 id={titleId} className="section-title">
           Add languages
         </h2>
-        <span className="section-meta">
-          {selectedLanguages.length} of {MAX_SELECTED_LANGUAGES}
-        </span>
+        {selectedLanguages.length > 0 && (
+          <span className="section-meta">{selectedLanguages.length} selected</span>
+        )}
       </div>
       <input
         type="search"
@@ -48,9 +46,6 @@ export default function LanguageSelector({ selectedLanguages, languageColors, on
         value={filter}
         onChange={(event) => setFilter(event.target.value)}
       />
-      {atLimit && (
-        <p className="hint">That’s as many as the map can colour at once. Remove one to add another.</p>
-      )}
       <div className="chip-grid" role="group" aria-labelledby={titleId}>
         {visible.map((language) => {
           const isSelected = selected.has(language.code);
@@ -61,7 +56,6 @@ export default function LanguageSelector({ selectedLanguages, languageColors, on
               className="chip"
               aria-pressed={isSelected}
               aria-label={`${language.name}, official in ${countriesLabel(language.countries.length)}`}
-              disabled={!isSelected && atLimit}
               onClick={() => onToggle(language.code)}
             >
               <span

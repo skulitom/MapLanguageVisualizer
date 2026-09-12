@@ -2,9 +2,10 @@ import type { CountryFill, CountryLanguageData, MapCountry, VisualizationMode } 
 import { FAMILY_COUNTS } from '../data/dataset';
 
 /**
- * Categorical hues (steps for a dark surface), handed to selected languages in
- * this fixed order. A language keeps its hue until it is deselected, and the
- * freed hue goes to the next language added.
+ * The first eight colours handed to selected languages, in this fixed order:
+ * categorical hues stepped for a dark surface and checked for colour-blind
+ * separation. A language keeps its colour until it is deselected, and the freed
+ * colour goes to the next language added.
  */
 export const HIGHLIGHT_PALETTE = [
   '#3987e5', // blue
@@ -17,7 +18,22 @@ export const HIGHLIGHT_PALETTE = [
   '#e66767', // red
 ] as const;
 
-export const MAX_SELECTED_LANGUAGES = HIGHLIGHT_PALETTE.length;
+/**
+ * Colours for a ninth language onwards. Picked by farthest-point search in
+ * OKLCH over everything that stays inside sRGB and readable on the map, so each
+ * sits at least OKLab dE 10 from every colour before it. Unlike the first eight
+ * these are not checked for colour blindness; the legend, tooltips and country
+ * lists name every language, so colour is never the only cue.
+ */
+const EXTRA_PALETTE = [
+  '#7ccf00', '#20c9e5', '#fe77f5', '#8a46a7', '#7f6438',
+  '#d4a3c1', '#00768d', '#4f4de3', '#a4be90', '#c646c9',
+  '#c80035', '#89a200', '#639fb4', '#f79968', '#9f779a',
+  '#d7b000', '#8fb1ff', '#974e66', '#00d4a0', '#8c8956',
+] as const;
+
+/** Every colour a language can take, best first. Past the end they start over. */
+const LANGUAGE_COLORS = [...HIGHLIGHT_PALETTE, ...EXTRA_PALETTE];
 
 /** Countries with data that speak none of the selected languages. */
 export const LAND_COLOR = '#2b3648';
@@ -81,7 +97,7 @@ function buildFamilyLegend(): FamilyLegendEntry[] {
 /** Families in legend order, largest first, with the small ones folded together. */
 export const FAMILY_LEGEND = buildFamilyLegend();
 
-/** Keeps the hues already given out and hands each new language the first free one. */
+/** Keeps the colours already given out and hands each new language the first free one. */
 export function assignLanguageColors(
   languages: string[],
   previous: Record<string, string>
@@ -97,11 +113,13 @@ export function assignLanguageColors(
     }
   }
 
+  // Past LANGUAGE_COLORS (28 languages at once) colours start over.
+  let reused = 0;
   for (const code of languages) {
     if (colors[code]) continue;
     const color =
-      HIGHLIGHT_PALETTE.find((candidate) => !used.has(candidate)) ??
-      HIGHLIGHT_PALETTE[HIGHLIGHT_PALETTE.length - 1];
+      LANGUAGE_COLORS.find((candidate) => !used.has(candidate)) ??
+      LANGUAGE_COLORS[reused++ % LANGUAGE_COLORS.length];
     colors[code] = color;
     used.add(color);
   }

@@ -15,7 +15,7 @@ import { useMediaQuery } from './hooks/useMediaQuery';
 import { useWorldGeometry } from './hooks/useWorldGeometry';
 import { REPO_URL } from './config';
 import { COUNTRY_COUNT, LANGUAGE_BY_CODE, languageName } from './data/dataset';
-import { assignLanguageColors, computeFills, matchedLanguages, MAX_SELECTED_LANGUAGES } from './utils/colorScales';
+import { assignLanguageColors, computeFills, matchedLanguages } from './utils/colorScales';
 import { formatUrlState, parseUrlState } from './utils/urlState';
 import type { FocusRequest, MapCountry, VisualizationMode } from './types';
 import './App.css';
@@ -38,9 +38,7 @@ const EMPTY_SELECTION: LanguageSelection = { languages: [], colors: {} };
 
 function readUrlState() {
   const state = parseUrlState(window.location.hash);
-  const languages = [...new Set(state.languages)]
-    .filter((code) => LANGUAGE_BY_CODE.has(code))
-    .slice(0, MAX_SELECTED_LANGUAGES);
+  const languages = [...new Set(state.languages)].filter((code) => LANGUAGE_BY_CODE.has(code));
   return { ...state, languages };
 }
 
@@ -140,10 +138,11 @@ export default function App() {
 
   const toggleLanguage = useCallback(
     (code: string) =>
-      updateLanguages((languages) => {
-        if (languages.includes(code)) return languages.filter((selected) => selected !== code);
-        return languages.length < MAX_SELECTED_LANGUAGES ? [...languages, code] : languages;
-      }),
+      updateLanguages((languages) =>
+        languages.includes(code)
+          ? languages.filter((selected) => selected !== code)
+          : [...languages, code]
+      ),
     [updateLanguages]
   );
 
@@ -151,9 +150,7 @@ export default function App() {
   const showLanguage = useCallback(
     (code: string) => {
       setMode('highlight');
-      updateLanguages((languages) =>
-        languages.includes(code) || languages.length >= MAX_SELECTED_LANGUAGES ? languages : [...languages, code]
-      );
+      updateLanguages((languages) => (languages.includes(code) ? languages : [...languages, code]));
     },
     [updateLanguages]
   );
@@ -212,7 +209,6 @@ export default function App() {
 
   // The country card offers to highlight each language; from the families view that switches views.
   const cardLanguages = mode === 'highlight' ? selection.languages : [];
-  const canAddLanguage = mode !== 'highlight' || selection.languages.length < MAX_SELECTED_LANGUAGES;
   const toggleFromCard = mode === 'highlight' ? toggleLanguage : showLanguage;
 
   const legend = (
@@ -301,7 +297,6 @@ export default function App() {
                 country={selectedCountry}
                 selectedLanguages={cardLanguages}
                 languageColors={selection.colors}
-                canAddLanguage={canAddLanguage}
                 onToggleLanguage={toggleFromCard}
                 onClose={closeCountry}
               />
@@ -336,7 +331,6 @@ export default function App() {
                 country={selectedCountry}
                 selectedLanguages={cardLanguages}
                 languageColors={selection.colors}
-                canAddLanguage={canAddLanguage}
                 onToggleLanguage={toggleFromCard}
               />
             ) : (

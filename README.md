@@ -12,7 +12,7 @@ address bar always holds the current view.
 
 ## What you can do
 
-- **Highlight languages.** Choose up to eight at a time, from the list or the
+- **Highlight languages.** Choose as many as you like, from the list or the
   search box. A language keeps its colour while you add and remove others, and a
   country that lists more than one of them is striped in all of their colours:
   Canada in English and French, Chad in French and Arabic, the United States in
@@ -85,8 +85,10 @@ Tuvalu and French Guiana, which have no shape of their own even at 1:50m, are
 placed by hand. Kosovo is matched by name because the atlas gives it no ISO
 code, and Northern Cyprus and Somaliland are shown without language data.
 
-**Colours.** Selected languages take eight categorical colours in a fixed order
-and keep them until they are removed. The family colours were assigned so that
+**Colours.** Selected languages take eight categorical colours in a fixed
+order, then twenty more chosen to sit as far as possible from those and from
+each other; a language keeps its colour until it is removed. Only the first
+eight are checked for colour blindness. The family colours were assigned so that
 every pair of families sharing a land border stays distinguishable under
 protanopia and deuteranopia simulation. The legend, tooltips and country lists
 name everything, so colour is never the only way to tell.
